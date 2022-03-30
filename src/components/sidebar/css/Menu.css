@@ -1,0 +1,253 @@
+span {
+    text-transform: capitalize;
+}
+
+.menu {
+    margin: 5px 0;
+    position: relative;
+}
+
+.menu .menu-item {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 15px;
+    display: flex;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.menu .menu-item {
+    border-radius: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.menu .menu-item.active, 
+.menu .menu-item:hover, 
+.menu .menu-item.active, 
+.menu .menu-item:hover .menu-icon {
+    background: var(--color-sidebar-secondary);
+    color: var(--secondary);
+}
+.menu .menu-item.active{
+    font-weight: 600;
+}
+.menu .menu-item .menu-icon {
+    margin: 0 10px 0 0;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.sidebar.inactive .menu .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar.inactive .menu .menu-item.menu-item.active, 
+.sidebar.inactive .menu .menu-item.menu-item:hover {
+    background-color: transparent;
+}
+
+.sidebar.inactive .menu .menu-item.active .menu-icon,
+.sidebar.inactive .menu .menu-item .menu-icon:hover {
+    background-color: var(--color-sidebar-secondary);
+    color: var(--secondary);
+    
+}
+
+.sidebar.inactive .menu .menu-item .menu-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    margin: 0;
+}
+
+.sidebar.inactive .menu .menu-item span {
+    opacity: 1;
+    width: 0;
+    height: 0;
+    display: none;
+    overflow: hidden;
+}
+
+.sidebar .menu .menu-item .angle-sub-menu {
+    position: absolute;
+    right: 20px;
+}
+
+.sidebar .sidebar-content .menu .menu-item.active .angle-sub-menu {
+    transform: rotate(270deg);
+
+}
+
+.sidebar.inactive .menu .menu-item .angle-sub-menu {
+    right: 5px;
+}
+
+
+/*--------*/
+/*Sub-menu*/
+/*--------*/
+
+.menu .sub-menu {
+    color: var(--primary);
+    border-left: 1px solid rgba(179, 184, 212, .2);
+    box-sizing: border-box;
+    padding-left: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease-in-out;
+    width: calc(100% - 20px);
+    list-style: none;
+
+}
+
+.sidebar.inactive .menu .sub-menu {
+    width: 100%;
+    
+}
+
+.menu .sub-menu.active {
+    max-height: 200px;
+    
+}
+
+.sidebar.inactive .menu .sub-menu {
+
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu .sub-menu .sub-menu-item {
+    display: flex;
+    margin: 5px 0;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--primary);
+    box-sizing: border-box;
+    padding: 5px;
+    align-items: center;
+}
+
+.menu .sub-menu .sub-menu-item:hover {
+    transition: .1s;
+    background: var(--color-sidebar-secondary);
+    border-radius: 5px;
+    color: var(--secondary);
+}
+
+.menu .sub-menu .sub-menu-item.active {
+    /* change in background, not recorded in video */
+    background: var(--color-sidebar-secondary);
+    border-radius: 5px;
+    color: var(--secondary);
+
+
+}
+
+.menu .sub-menu .sub-menu-item .menu-icon {
+
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+
+    margin-right: 5px;
+}
+
+.sidebar.inactive .menu .sub-menu .sub-menu-item .menu-icon {
+    margin-right: 0px;
+}
+
+.sidebar.inactive .menu .sub-menu span {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.sidebar.inactive .menu .sub-menu-item {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 3px;
+}
+
+.sidebar.inactive .menu .sub-menu .sub-menu-item.active,
+.sidebar.inactive .menu .sub-menu .sub-menu-item:hover {
+    font-size: 15px;
+    background: var(--color-sidebar-secondary);
+    border-radius: 10px;
+}
+
+/*dark mode*/
+
+body.dark-mode .menu .menu-item {
+    color: var(--primary-darkmode);
+}
+
+body.dark-mode .menu .menu-item.active,body.dark-mode .menu .menu-item:hover,
+body.dark-mode .menu .menu-item.active,body.dark-mode .menu .menu-item:hover .menu-icon {
+    background: var(--color-sidebar-secondary-darkmode);
+
+    color: var(--secondary-darkmode);
+}
+
+body.dark-mode .sidebar.inactive .menu .menu-item.active .menu-icon, 
+body.dark-mode .sidebar.inactive .menu .menu-item .menu-icon:hover {
+    background-color: var(--color-sidebar-secondary-darkmode);
+    color: var(--secondary-darkmode);
+}
+
+/*--------*/
+/*Sub-menu*/
+/*--------*/
+
+body.dark-mode .menu .sub-menu {
+    color: var(--primary-darkmode);
+}
+
+body.dark-mode .menu .sub-menu .sub-menu-item {
+    color: var(--primary-darkmode);
+}
+
+body.dark-mode .menu .sub-menu .sub-menu-item:hover {
+    background: var(--color-sidebar-secondary-darkmode);
+    color: var(--secondary-darkmode);
+}
+
+body.dark-mode .menu .sub-menu .sub-menu-item.active {
+    /* change in background, not recorded in video */
+    background: var(--color-sidebar-secondary-darkmode);
+    color: var(--secondary-darkmode);
+
+}
+
+body.dark-mode .sidebar.inactive .menu .sub-menu-item.active,
+body.dark-mode .sidebar.inactive .menu .sub-menu-item:hover {
+
+    background: var(--color-sidebar-secondary-darkmode);
+
+}

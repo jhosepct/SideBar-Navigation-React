@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+:root {
+  /*blue*/
+  /*
+  --primary: #fbfbfb;
+  --secondary: #1a1b1d;
+  --color-sidebar-primary: #415ae8;
+  --color-sidebar-secondary: #3c50cb;
+  --color-content:#f4f4f4;
+  */
+   /*blue*/
+  
+  --primary: #576484;
+  --secondary: #fbfbfb;
+  --color-sidebar-primary: #fbfbfb;
+  --color-sidebar-secondary: #0183FF;
+  --color-content:#f4f4f4;
+ 
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  /*white*/
+  /*--primary: #71767b;
+  --secondary: #1a1b1d;
+  --color-sidebar-primary: #fbfbfb;
+  --color-sidebar-secondary: #efefef;
+  --color-content: #e1e6ef;*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  /*dark-mode*/
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  --primary-darkmode: #71767b;
+  --secondary-darkmode: #fbfbfb;
+  --color-sidebar-primary-darkmode: #1a1c1e;
+  --color-sidebar-secondary-darkmode: #0183FF;/*
+  --color-content-darkmode: #111315;*/
 }

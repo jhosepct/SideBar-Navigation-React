@@ -1,3 +1,15 @@
+# Sidebar Navigation
+
+Sidebar using React, react-router(v6) and fontawesome
+
+**Packages we are using:**
+- fontawesome: [link](https://fontawesome.com/v5/docs/web/use-with/react) 
+- react-router-dom(v6): [link](https://reactrouter.com/docs/en/v6/getting-started/overview)
+
+
+## Photos
+![Preview](/1.jpg)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

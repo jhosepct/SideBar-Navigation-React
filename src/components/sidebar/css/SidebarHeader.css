@@ -1,0 +1,100 @@
+.sidebar-header {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 5% 15px;
+    border-bottom: 1px solid rgba(179,184,212,.6);
+}
+
+.sidebar-header .logo {
+    width: 30px;
+    height:30px;
+    /*background-color: var(--color-sidebar-secondary);*/
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.sidebar.inactive .sidebar-header{
+    padding: 13.5px 10px;
+    position: relative;
+    width: 50px;
+    height:50px;
+}
+.sidebar.inactive .sidebar-header .logo {
+    position: absolute;
+
+}
+
+.sidebar-header .logo img {
+    object-fit: contain;
+    height: calc(100%);
+    width: 100%;
+    /*cambiar color a negro img*/
+    /*filter: invert(1.4) sepia(1) saturate(0);*/
+}
+
+.sidebar-header .name {
+    transition: opacity .2s ease-in;
+    font-size: 1.2em;
+    margin:10px;
+}
+.sidebar-header .name h3{
+    font-weight:bolder;
+    color: #071d4a;
+}
+
+.sidebar.inactive .sidebar-header .name {
+    opacity: 1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.sidebar .sidebar-header .toggle-menu-btn {
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.sidebar .sidebar-header .toggle-menu-btn:hover, 
+.sidebar.inactive .sidebar-header .toggle-menu-btn:hover {
+    background: var(--color-sidebar-secondary);
+    color: var(--primary);
+}
+
+.sidebar.inactive .sidebar-header .toggle-menu-btn {
+    width: 20%;
+    font-size: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+
+/*dark mode*/
+body.dark-mode .sidebar-header{
+    border-bottom: 1px solid rgba(179,184,212,.2);
+}/*
+body.dark-mode .sidebar-header .logo{    
+    background-color: var(--color-sidebar-secondary-darkmode);
+}*/
+body.dark-mode .sidebar-header .logo img{
+    filter: none;
+}
+body.dark-mode .sidebar-header .name h3{
+    color: #fff;
+}

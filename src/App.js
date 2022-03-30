@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import ExampleSidebar from './components/ExampleSidebar';
+import { routes } from './components/helpers/data';
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<ExampleSidebar />} >
+          <Route path={routes.dashboard} element={<p>dashboard</p>} />
+          <Route path={routes.projects} element={<p>projects</p>} />
+          <Route path={routes.personal} element={<p>personal</p>} />
+          <Route path={routes.business} element={<p>business</p>} />
+          <Route path={routes.messages} element={<p>messages</p>} />
+          <Route path={routes.employees} element={<p>employees</p>} />
+          <Route path={routes.shipment} element={<p>shipment</p>} />
+          <Route path={routes.file} element={<p>file</p>} />
+        </Route>
+
+      </Routes>
     </div>
   );
 }
